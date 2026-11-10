@@ -15,12 +15,12 @@ class TestCalculator(unittest.TestCase):
     # ##########################
 
     ######## Partner 1
-    def test_mul(self):
+    def test_multiply(self):
         self.assertEqual(mul(3, 4), 12)
         self.assertEqual(mul(-2, 5), -10)
         self.assertEqual(mul(0, 8), 0)
 
-    def test_div(self):
+    def test_divide(self):
         self.assertAlmostEqual(div(2, 10), 5)
         self.assertAlmostEqual(div(-4, 12), -3)
         with self.assertRaises(ZeroDivisionError):
@@ -28,7 +28,7 @@ class TestCalculator(unittest.TestCase):
     # ##########################
 
     ######## Partner 2
-    def test_div_by_zero(self): # 1 assertion
+    def test_divide_by_zero(self): # 1 assertion
         with self.assertRaises(ZeroDivisionError):
             div(0, 5)
 
@@ -38,12 +38,12 @@ class TestCalculator(unittest.TestCase):
         self.assertAlmostEqual(logarithm(10, 100), 2)
         self.assertAlmostEqual(logarithm(3, 9), 2)
 
-    def test_logarithm_invalid_base(self): # 1 assertion
+    def test_log_invalid_base(self): # 1 assertion
         with self.assertRaises(ValueError):
             logarithm(1, 10)
     # ##########################
     
-    def test_logarithm_invalid_argument(self):
+    def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
             logarithm(0, 10)
         with self.assertRaises(ValueError):
